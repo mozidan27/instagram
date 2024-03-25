@@ -1,29 +1,41 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
-    super.key,
-    required this.hinttext,
-    required this.labeltext,
-  });
+class CustomTextEmailField extends StatefulWidget {
+  const CustomTextEmailField(
+      {super.key, required this.hinttext, required this.labeltext, this.icon});
   final String hinttext, labeltext;
+  final IconData? icon;
+
+  @override
+  State<CustomTextEmailField> createState() => _CustomTextEmailFieldState();
+}
+
+class _CustomTextEmailFieldState extends State<CustomTextEmailField> {
+  final _emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      controller: _emailController,
+      validator: (data) {
+        if (data!.isEmpty) {
+          return 'Field is required';
+        }
+        return null;
+      },
       style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(color: Colors.white),
         ),
-        labelText: labeltext,
+        labelText: widget.labeltext,
         labelStyle: const TextStyle(color: Colors.grey),
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         floatingLabelStyle: const TextStyle(color: Colors.white, fontSize: 16),
         filled: true,
         fillColor: const Color(0xff1c2b33),
-        hintText: hinttext,
+        hintText: widget.hinttext,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
         hintStyle: TextStyle(color: Colors.grey[600]),
       ),
