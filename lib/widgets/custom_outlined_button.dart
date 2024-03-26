@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 class CustomOutlinedButton extends StatelessWidget {
   const CustomOutlinedButton({
     super.key,
+    required this.buttonText,
+    required this.borderColor,
+    this.textColor,
   });
+  final String buttonText;
+  final Color borderColor;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +20,14 @@ class CustomOutlinedButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(50),
         color: Colors.transparent,
         border: Border.all(
-          color: const Color(0xff0064e0),
+          color: borderColor,
         ),
       ),
-      child: const Center(
+      child: Center(
         child: Text(
-          'Create new account',
+          buttonText,
           style: TextStyle(
-              color: Color(0xff0064e0),
-              fontSize: 16,
-              fontWeight: FontWeight.w500),
+              color: textColor, fontSize: 16, fontWeight: FontWeight.w500),
         ),
       ),
     );

@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:instagram/views/create_new_account.dart';
 import 'package:instagram/views/forgot_pass_page.dart';
+import 'package:instagram/views/home_page.dart';
 import 'package:instagram/widgets/custom_outlined_button.dart';
 import 'package:instagram/widgets/custom_text_email_field.dart';
 import 'package:instagram/widgets/custom_text_password_field.dart';
@@ -14,7 +13,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // Set the background gradient
-      backgroundColor: Colors.black,
+
       extendBodyBehindAppBar: true,
       body: Container(
         decoration: const BoxDecoration(
@@ -66,7 +65,21 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  const CustomButton(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const HomePage();
+                          },
+                        ),
+                      );
+                    },
+                    child: const CustomButton(
+                      buttonText: 'Log in',
+                    ),
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
@@ -97,7 +110,11 @@ class LoginPage extends StatelessWidget {
                           },
                         ));
                       },
-                      child: const CustomOutlinedButton()),
+                      child: const CustomOutlinedButton(
+                        buttonText: 'Create new account',
+                        borderColor: Color(0xff0064e0),
+                        textColor: Color(0xff0064e0),
+                      )),
                   const SizedBox(
                     height: 20,
                   ),
