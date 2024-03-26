@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
-import 'package:instagram/views/Login_page.dart';
 import 'package:instagram/widgets/custom_outlined_button.dart';
 import 'package:instagram/widgets/custom_text_email_field.dart';
 import 'package:instagram/widgets/login_buttom.dart';
