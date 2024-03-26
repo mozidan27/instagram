@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/views/HomePageScreens/MainPage.dart';
+import 'package:instagram/views/HomePageScreens/User_page.dart';
 import 'package:instagram/views/HomePageScreens/Search_page.dart';
 import 'package:instagram/views/HomePageScreens/post_page.dart';
-import 'package:instagram/views/HomePageScreens/profile_page.dart';
-import 'package:instagram/views/HomePageScreens/reels_page.dart';
+import 'package:instagram/views/HomePageScreens/user_profile.dart';
+import 'package:instagram/views/HomePageScreens/UserReels.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,11 +21,11 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> _children = [
-    MainPage(),
+    UserPage(),
     const SearchPage(),
     const PostPage(),
-    const ReelsPage(),
-    const ProfilePage(),
+    const UserReels(),
+    const UserProfile(),
   ];
   @override
   Widget build(BuildContext context) {
