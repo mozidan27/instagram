@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/views/utils/bubbles_stories.dart';
 
-class UserPage extends StatelessWidget {
+class UserMainPage extends StatelessWidget {
   final List people = [
     'Mohamed',
     'Sayed',
@@ -12,7 +12,7 @@ class UserPage extends StatelessWidget {
     'Ali'
   ];
 
-  UserPage({super.key});
+  UserMainPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

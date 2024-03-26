@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/views/HomePageScreens/User_page.dart';
+import 'package:instagram/views/HomePageScreens/User_mian_page.dart';
 import 'package:instagram/views/HomePageScreens/Search_page.dart';
 import 'package:instagram/views/HomePageScreens/post_page.dart';
 import 'package:instagram/views/HomePageScreens/user_profile.dart';
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> _children = [
-    UserPage(),
+    UserMainPage(),
     const SearchPage(),
     const PostPage(),
     const UserReels(),
