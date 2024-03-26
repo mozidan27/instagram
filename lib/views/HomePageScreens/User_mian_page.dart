@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/views/utils/bubbles_stories.dart';
+import 'package:instagram/views/utils/user_posts.dart';
 
 class UserMainPage extends StatelessWidget {
   final List people = [
@@ -58,7 +59,17 @@ class UserMainPage extends StatelessWidget {
                 return BubblesStories(text: people[index]);
               },
             ),
-          )
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: people.length,
+              itemBuilder: (context, index) {
+                return UserPost(
+                  username: people[index],
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
