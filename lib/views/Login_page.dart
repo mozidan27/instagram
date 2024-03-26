@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/views/create_new_account.dart';
+import 'package:instagram/views/signup_with_number.dart';
 import 'package:instagram/views/forgot_pass_page.dart';
 import 'package:instagram/views/home_page.dart';
 import 'package:instagram/widgets/custom_outlined_button.dart';
@@ -106,7 +106,7 @@ class LoginPage extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return const CreateNewAccount();
+                            return const SignUpWithNumber();
                           },
                         ));
                       },

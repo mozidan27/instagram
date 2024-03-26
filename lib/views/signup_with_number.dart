@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:instagram/views/confirm_mobile_number.dart';
+import 'package:instagram/views/signup_with_email.dart';
 import 'package:instagram/widgets/custom_outlined_button.dart';
 import 'package:instagram/widgets/custom_text_email_field.dart';
 import 'package:instagram/widgets/login_buttom.dart';
 
-class CreateNewAccount extends StatelessWidget {
-  const CreateNewAccount({super.key});
+class SignUpWithNumber extends StatelessWidget {
+  const SignUpWithNumber({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,15 +66,36 @@ class CreateNewAccount extends StatelessWidget {
                         fontWeight: FontWeight.w600),
                   ),
                   const Gap(20),
-                  const CustomButton(
-                    buttonText: 'Next',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return const ConfirmMobileNumber();
+                        },
+                      ));
+                    },
+                    child: const CustomButton(
+                      buttonText: 'Next',
+                    ),
                   ),
                   const Gap(15),
-                  const CustomOutlinedButton(
-                    buttonText: 'Sign up with email',
-                    borderColor: Colors.white,
-                    textColor: Colors.white,
-                    borderWidth: 0.2,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const SignUpWithEmail();
+                          },
+                        ),
+                      );
+                    },
+                    child: const CustomOutlinedButton(
+                      buttonText: 'Sign up with email',
+                      borderColor: Colors.white,
+                      textColor: Colors.white,
+                      borderWidth: 0.2,
+                    ),
                   ),
                   const Spacer(),
                   GestureDetector(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:instagram/views/Reset_code.dart';
 import 'package:instagram/widgets/custom_outlined_button.dart';
 import 'package:instagram/widgets/custom_text_email_field.dart';
 import 'package:instagram/widgets/login_buttom.dart';
@@ -72,8 +73,20 @@ class ForgotPasswordPage extends StatelessWidget {
                         fontWeight: FontWeight.w600),
                   ),
                   const Gap(20),
-                  const CustomButton(
-                    buttonText: 'Continue',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const RestCode();
+                          },
+                        ),
+                      );
+                    },
+                    child: const CustomButton(
+                      buttonText: 'Continue',
+                    ),
                   ),
                   const Gap(20),
                   const Center(
