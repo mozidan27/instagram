@@ -17,12 +17,6 @@ class _CustomTextEmailFieldState extends State<CustomTextEmailField> {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: _emailController,
-      validator: (data) {
-        if (data!.isEmpty) {
-          return 'Field is required';
-        }
-        return null;
-      },
       style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
