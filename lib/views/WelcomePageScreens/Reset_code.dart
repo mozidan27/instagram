@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:instagram/widgets/custom_outlined_button.dart';
-import 'package:instagram/widgets/custom_text_email_field.dart';
-import 'package:instagram/widgets/login_buttom.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/custom_text_email_field.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/login_buttom.dart';
 
-class ConfirmationCode extends StatelessWidget {
-  const ConfirmationCode({super.key});
+class RestCode extends StatelessWidget {
+  const RestCode({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +29,8 @@ class ConfirmationCode extends StatelessWidget {
           ),
         ),
         child: const SizedBox(
-          height: double.infinity,
           width: double.infinity,
-          child: SingleChildScrollView(
+          child: Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Column(
@@ -40,7 +38,7 @@ class ConfirmationCode extends StatelessWidget {
                 children: [
                   Gap(120),
                   Text(
-                    "Enter the confirmation code",
+                    'Confirm your account',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 26,
@@ -48,24 +46,35 @@ class ConfirmationCode extends StatelessWidget {
                   ),
                   Gap(10),
                   Text(
-                    'To confirm your account, enter the 6-digit code we sent via SMS to +2***********.',
+                    'We sent a code to your email. Enter that code to confir your account.',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w400),
                   ),
+                  Text(
+                    "Can't confirm account?",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500),
+                  ),
                   Gap(20),
                   CustomTextEmailField(
-                      hinttext: 'Confirmation code',
-                      labeltext: 'Confirmation code'),
+                      hinttext: 'Enter code', labeltext: 'Enter code'),
                   Gap(20),
-                  CustomButton(buttonText: "Next"),
-                  Gap(15),
-                  CustomOutlinedButton(
-                    buttonText: "I didn't get the code",
-                    borderColor: Colors.white,
-                    textColor: Colors.white,
-                    borderWidth: 0.2,
+                  CustomButton(
+                    buttonText: 'Continue',
+                  ),
+                  Gap(20),
+                  Center(
+                    child: Text(
+                      'Send code again',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600),
+                    ),
                   ),
                 ],
               ),

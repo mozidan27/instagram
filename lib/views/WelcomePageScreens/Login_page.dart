@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/views/signup_with_number.dart';
-import 'package:instagram/views/forgot_pass_page.dart';
-import 'package:instagram/views/home_page.dart';
-import 'package:instagram/widgets/custom_outlined_button.dart';
-import 'package:instagram/widgets/custom_text_email_field.dart';
-import 'package:instagram/widgets/custom_text_password_field.dart';
-import 'package:instagram/widgets/login_buttom.dart';
+import 'package:instagram/views/WelcomePageScreens/signup_with_number.dart';
+import 'package:instagram/views/WelcomePageScreens/forgot_pass_page.dart';
+import 'package:instagram/views/HomePageScreens/home_page.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/custom_outlined_button.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/custom_text_email_field.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/custom_text_password_field.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/login_buttom.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:instagram/views/Reset_code.dart';
-import 'package:instagram/widgets/custom_outlined_button.dart';
-import 'package:instagram/widgets/custom_text_email_field.dart';
-import 'package:instagram/widgets/login_buttom.dart';
+import 'package:instagram/views/WelcomePageScreens/Reset_code.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/custom_outlined_button.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/custom_text_email_field.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/login_buttom.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
-import 'package:instagram/views/confirmation_code.dart';
-import 'package:instagram/widgets/login_buttom.dart';
+import 'package:instagram/views/WelcomePageScreens/confirmation_code.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/login_buttom.dart';
 
 class ConfirmMobileNumber extends StatelessWidget {
   const ConfirmMobileNumber({super.key});

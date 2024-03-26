@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:instagram/views/confirm_mobile_number.dart';
-import 'package:instagram/views/signup_with_email.dart';
-import 'package:instagram/widgets/custom_outlined_button.dart';
-import 'package:instagram/widgets/custom_text_email_field.dart';
-import 'package:instagram/widgets/login_buttom.dart';
+import 'package:instagram/views/WelcomePageScreens/confirm_mobile_number.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/custom_outlined_button.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/custom_text_email_field.dart';
+import 'package:instagram/widgets/WelcomePageWidgets/login_buttom.dart';
 
-class SignUpWithNumber extends StatelessWidget {
-  const SignUpWithNumber({super.key});
+class SignUpWithEmail extends StatelessWidget {
+  const SignUpWithEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +40,7 @@ class SignUpWithNumber extends StatelessWidget {
                 children: [
                   const Gap(120),
                   const Text(
-                    "What's your mobile number?",
+                    "What's your Email?",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 26,
@@ -49,7 +48,7 @@ class SignUpWithNumber extends StatelessWidget {
                   ),
                   const Gap(10),
                   const Text(
-                    'Enter the mobile number where you can be contacted. No one will see this on your profile',
+                    'Enter the email where you can be contacted. No one will see this on your profile',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
@@ -57,7 +56,7 @@ class SignUpWithNumber extends StatelessWidget {
                   ),
                   const Gap(20),
                   const CustomTextEmailField(
-                      hinttext: 'Mobile number', labeltext: 'Mobile number'),
+                      hinttext: 'Email', labeltext: 'Email'),
                   Text(
                     "You may receive SMS notifications from us for security and login purposes",
                     style: TextStyle(
@@ -81,17 +80,10 @@ class SignUpWithNumber extends StatelessWidget {
                   const Gap(15),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return const SignUpWithEmail();
-                          },
-                        ),
-                      );
+                      Navigator.pop(context);
                     },
                     child: const CustomOutlinedButton(
-                      buttonText: 'Sign up with email',
+                      buttonText: 'Sign up with mobile number',
                       borderColor: Colors.white,
                       textColor: Colors.white,
                       borderWidth: 0.2,
