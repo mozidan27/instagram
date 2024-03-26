@@ -117,6 +117,7 @@ class ForgotPasswordPage extends StatelessWidget {
                     buttonText: 'Log in with Facebook',
                     borderColor: Colors.white,
                     textColor: Colors.white,
+                    borderWidth: 0.2,
                   ),
                 ],
               ),

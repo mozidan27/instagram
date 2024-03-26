@@ -114,6 +114,7 @@ class LoginPage extends StatelessWidget {
                         buttonText: 'Create new account',
                         borderColor: Color(0xff0064e0),
                         textColor: Color(0xff0064e0),
+                        borderWidth: 2,
                       )),
                   const SizedBox(
                     height: 20,
