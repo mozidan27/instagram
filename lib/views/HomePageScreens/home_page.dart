@@ -24,13 +24,12 @@ class _HomePageState extends State<HomePage> {
     UserMainPage(),
     const SearchPage(),
     const PostPage(),
-    const UserReels(),
-    const UserProfile(),
+    UserReels(),
+    UserProfile(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _navigateButtonNavBar,
@@ -38,7 +37,6 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _selectedIndex,
         iconSize: 32,
         unselectedItemColor: Colors.white,
-        backgroundColor: Colors.black,
         type: BottomNavigationBarType.fixed,
         showUnselectedLabels: false,
         showSelectedLabels: false,

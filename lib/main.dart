@@ -10,9 +10,10 @@ class Instagram extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: const LoginPage(),
+      theme: ThemeData(brightness: Brightness.dark),
     );
   }
 }

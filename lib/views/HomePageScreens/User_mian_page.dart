@@ -20,7 +20,6 @@ class UserMainPage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
-        backgroundColor: Colors.transparent,
         title: SizedBox(
           height: 80,
           child: Image.asset(
@@ -47,7 +46,6 @@ class UserMainPage extends StatelessWidget {
           ),
         ],
       ),
-      backgroundColor: Colors.black,
       body: Column(
         children: [
           SizedBox(
