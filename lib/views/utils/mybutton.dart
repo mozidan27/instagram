@@ -13,7 +13,7 @@ class Mybutton extends StatelessWidget {
         children: [
           Icon(
             icon,
-            size: 40,
+            size: 30,
           ),
           const SizedBox(
             height: 10,

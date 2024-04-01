@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:instagram/views/utils/mybutton.dart';
 
 class PostTemplate extends StatelessWidget {
@@ -10,14 +11,16 @@ class PostTemplate extends StatelessWidget {
       required this.numberofcomment,
       required this.numberofshare,
       this.userpost,
-      required this.hishtags});
+      required this.hishtags,
+      required this.dots});
 
   final String username,
       description,
       numberoflikes,
       numberofcomment,
       numberofshare,
-      hishtags;
+      hishtags,
+      dots;
 
   final userpost;
 
@@ -67,15 +70,18 @@ class PostTemplate extends StatelessWidget {
           // post buttons
 
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.only(right: 20, left: 20, top: 20),
             child: Container(
               alignment: const Alignment(1, 1),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Mybutton(icon: Icons.favorite, number: numberoflikes),
-                  Mybutton(icon: Icons.chat_bubble, number: numberofcomment),
-                  Mybutton(icon: Icons.send, number: numberofshare)
+                  Mybutton(icon: Icons.favorite_outline, number: numberoflikes),
+                  Mybutton(
+                      icon: Icons.chat_bubble_outline_sharp,
+                      number: numberofcomment),
+                  Mybutton(icon: Icons.send_outlined, number: numberofshare),
+                  Mybutton(icon: Icons.more_horiz, number: dots),
                 ],
               ),
             ),

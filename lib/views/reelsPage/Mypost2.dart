@@ -14,6 +14,7 @@ class MyPost2 extends StatelessWidget {
       numberofshare: '3823',
       hishtags: '#reels #flutter #code',
       userpost: Container(color: Colors.pink),
+      dots: '',
     );
   }
 }

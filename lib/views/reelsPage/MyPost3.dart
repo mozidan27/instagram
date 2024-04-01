@@ -13,6 +13,7 @@ class MyPost3 extends StatelessWidget {
       numberofcomment: '232',
       numberofshare: '3823',
       hishtags: '#reels #flutter #code',
+      dots: '',
       userpost: Container(color: Colors.red),
     );
   }

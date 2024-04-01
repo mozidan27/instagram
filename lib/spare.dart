@@ -2,8 +2,8 @@
 // import 'package:gap/gap.dart';
 // import 'package:instagram/views/utils/bubbles_stories.dart';
 
-// class UserProfile extends StatelessWidget {
-//   UserProfile({super.key});
+// class UserProfileSpare extends StatelessWidget {
+//   UserProfileSpare({super.key});
 //   final List story = [
 //     'drawing',
 //     'me',
@@ -232,3 +232,4 @@
 //     );
 //   }
 // }
+
