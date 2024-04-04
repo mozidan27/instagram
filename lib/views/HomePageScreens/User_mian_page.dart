@@ -1,6 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:instagram/views/HomePageScreens/messages_page.dart';
+import 'package:instagram/views/HomePageScreens/notification_page.dart';
 import 'package:instagram/views/utils/bubbles_stories.dart';
 import 'package:instagram/views/utils/user_posts.dart';
+import 'package:instagram/widgets/HomePageWidgets/Insta_logo_menu.dart';
+import 'package:popover/popover.dart';
 
 class UserMainPage extends StatelessWidget {
   UserMainPage({super.key, Key});
@@ -23,28 +29,59 @@ class UserMainPage extends StatelessWidget {
           SliverAppBar(
             floating: true,
             automaticallyImplyLeading: false,
-            title: SizedBox(
-              height: 80,
-              child: Image.asset(
-                'assets/images/textlogo.png',
-                color: Colors.white,
+            title: GestureDetector(
+              onTap: () => showPopover(
+                context: context,
+                bodyBuilder: (context) => const InstaLogoMenu(),
+                direction: PopoverDirection.top,
+                height: 100,
+                width: 250,
+              ),
+              child: SizedBox(
+                height: 80,
+                child: Image.asset(
+                  'assets/images/textlogo.png',
+                  color: Colors.white,
+                ),
               ),
             ),
-            actions: const [
-              Icon(
-                Icons.favorite_border,
-                size: 32,
-                color: Colors.white,
+            actions: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const NotificationPage();
+                      },
+                    ),
+                  );
+                },
+                child: const Icon(
+                  Icons.favorite_border,
+                  size: 32,
+                  color: Colors.white,
+                ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 30,
               ),
-              Icon(
-                Icons.maps_ugc_outlined,
-                size: 32,
-                color: Colors.white,
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const MessagesPage();
+                      },
+                    ),
+                  );
+                },
+                child: const Icon(
+                  Icons.maps_ugc_outlined,
+                  size: 32,
+                  color: Colors.white,
+                ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
             ],
